@@ -18,5 +18,11 @@
         display: flex;
         gap: 20px;
         align-items: center;
+
+        .item{
+            .link{
+                color: white;
+            }
+        }
     }
 }
