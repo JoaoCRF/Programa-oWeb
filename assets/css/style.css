@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: borderbox;
+    font-family: "Corben", serif;
 }
 
 .header-menu {
@@ -26,7 +27,8 @@
 
         .item{
             .link{
-                color: white;
+                color: var(--text-gray);
+                text-decoration: none;
             }
         }
     }
