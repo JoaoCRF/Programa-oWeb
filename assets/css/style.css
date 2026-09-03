@@ -4,6 +4,7 @@
     --text-white: #fff;
     --bg-button: #333;
     --bg-hero: #222;
+    --border-light: rgba(255, 255, 255, 0.3); 
 }
 
 *{
@@ -53,12 +54,84 @@
 
 .hero {
     background-color: var(--bg-hero);
-    padding: 80px 0;
+    padding: 80px 0 15px;
     display: flex;
     align-items: center;
     flex-direction: column;
 
     .title {
         color: var(--text-white);
+        margin-bottom: 15px;
+
+        .highlight {
+            background-image: linear-gradient(to left, #f233c6, #4846f9);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .description {
+        color: var(--text-gray);
+        margin-bottom: 25px;
+
+    }
+
+    .search {
+        border-radius: 30px;
+        padding: 10px 15px;
+        background-color: var(--bg-button);
+        border: 1px solid var(--border-light);
+        color: var(--text-white);
+        outline: none;
+        transition: 0.2s;
+
+        max-width: 50%;
+        width: 100%;
+
+        &:focus {
+            border-color: #f233c6;
+        }
+
+        &:hover {
+            border-color: #4846f9;
+        }
+    }
+}
+
+.events {
+    padding: 30px 0;
+    background-color: #222;
+
+    .filter {
+        display: flex;
+        justify-content: center;
+
+        .filter-list {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+
+            .item {
+                color: var(--text-gray);
+                border: 1px solid var(--border-light);
+                border-radius: 20px;
+                padding: 5px 10px;;
+                cursor: pointer;
+                font-size: 11px;
+                transition: 0.3s;
+
+                &.active {
+                    border-color: #4846f9;
+                    background-color: #4846f9;
+                    color: var(--text-white);
+                }
+
+                &:hover {
+                    color: var(--text-white);
+                    border-color: #4846f9;
+                }
+            }
+        }
     }
 }
